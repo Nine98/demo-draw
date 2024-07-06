@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-07-06T15:42:59.588Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="TjTR1FGAqF36TaNc6vbg" version="24.6.4" type="github">
+<mxfile host="app.diagrams.net" modified="2024-07-06T16:14:19.440Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="5jAHrNhUmsQSpx9fQODW" version="24.6.4" type="github">
   <diagram name="第 1 页" id="kcHQdLR27bvTdgTu87UB">
-    <mxGraphModel dx="1751" dy="649" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1543" dy="678" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -25,7 +25,7 @@
         <mxCell id="V1DBYt7TzoHOVX0YRmnc-7" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;1. 数据源注册（元数据管理）&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-40" y="170" width="170" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="V1DBYt7TzoHOVX0YRmnc-8" value="a. 离线：&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;注册数仓已经存在的数据源（hive表/hdfs），由磐石读/写&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;注册数仓不存在的数据源，由磐石写入&lt;/div&gt;&lt;/div&gt;&lt;div&gt;b. 在线：通过datahub数据传输任务写入tair存储引擎&lt;/div&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;align=left;position2=0.35;" vertex="1" parent="1">
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-8" value="a. 离线：hdfs / hive&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;注册数仓已经存在的数据源（hive表/hdfs），由磐石读/写&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;注册数仓不存在的数据源，由磐石写入&lt;/div&gt;&lt;/div&gt;&lt;div&gt;b. 在线：&lt;span style=&quot;background-color: initial;&quot;&gt;tair /&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;redis / rdb / mdb&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;通过datahub数据传输任务写入tair存储引擎&lt;/div&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;align=left;position2=0.35;" vertex="1" parent="1">
           <mxGeometry x="-90" y="30" width="340" height="110" as="geometry" />
         </mxCell>
         <mxCell id="V1DBYt7TzoHOVX0YRmnc-9" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;2. 算子开发&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
@@ -130,7 +130,7 @@
         <mxCell id="V1DBYt7TzoHOVX0YRmnc-89" value="&lt;span style=&quot;font-size: 13px;&quot;&gt;发起 merge 请求&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="428.5" y="860" width="122" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="V1DBYt7TzoHOVX0YRmnc-90" value="&lt;span style=&quot;font-size: 13px;&quot;&gt;轮询 merge 状态，成功，打 tag&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-90" value="&lt;span style=&quot;font-size: 13px;&quot;&gt;轮询 merge 状态，成功，打 &lt;b&gt;&lt;font color=&quot;#ff3333&quot;&gt;tag&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="396.5" y="891" width="191.5" height="50" as="geometry" />
         </mxCell>
         <mxCell id="V1DBYt7TzoHOVX0YRmnc-91" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.311;entryY=1.023;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#e3c800;strokeColor=#B09500;" edge="1" parent="1">
@@ -162,6 +162,106 @@
         </mxCell>
         <mxCell id="V1DBYt7TzoHOVX0YRmnc-104" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;h3&lt;/span&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
           <mxGeometry x="297.5" y="210" width="55" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-105" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="1080" width="220" height="460" as="geometry" />
+        </mxCell>
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-106" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;doddle-web&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="195" y="1090" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-107" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.018;entryY=0.805;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-40" y="1180" as="sourcePoint" />
+            <mxPoint x="149.99999999999997" y="1180.0499999999997" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-108" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;3. 特征抽取&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="1110" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-109" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;3.1 MFDL 任务定义&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="1150" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-110" value="&lt;ul&gt;&lt;li&gt;业务算子库 &lt;b style=&quot;&quot;&gt;&lt;font color=&quot;#ff0000&quot;&gt;tag&lt;/font&gt;&lt;/b&gt;&lt;/li&gt;&lt;li&gt;Java 特征抽取框架 jar包（解析xml，调用算子执行）&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="1174" width="210" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-111" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.018;entryY=0.805;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-40" y="1290" as="sourcePoint" />
+            <mxPoint x="149.99999999999997" y="1290.0499999999997" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-112" value="&lt;ul&gt;&lt;li&gt;输出表（一张）&lt;/li&gt;&lt;li&gt;输入表（多张）&lt;/li&gt;&lt;li&gt;每一列特征的计算逻辑&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="1283" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-113" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;3.2 MFDL 任务 xml 配置&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="1260" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-114" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.018;entryY=0.805;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-40" y="1410" as="sourcePoint" />
+            <mxPoint x="149.99999999999997" y="1410.0499999999997" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-115" value="&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Java 算子库打成 Jar 包&lt;/span&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;c++算子库打成可执行文件&lt;/li&gt;&lt;li&gt;通用算子库 和 业务算子库 合并打包&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="-57" y="1403" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-116" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;3.3 MFDL 任务 打包&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="1380" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-117" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.018;entryY=0.805;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#e51400;strokeColor=#B20000;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-40" y="1520" as="sourcePoint" />
+            <mxPoint x="149.99999999999997" y="1520.0499999999997" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-118" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;3.4 MFDL 任务 提交&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="1490" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-119" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="561" y="1080" width="220" height="460" as="geometry" />
+        </mxCell>
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-120" value="&lt;span style=&quot;font-size: 20px;&quot;&gt;云村&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="575" y="1080" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-121" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.018;entryY=0.805;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#e51400;strokeColor=#B20000;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="1520" as="sourcePoint" />
+            <mxPoint x="560" y="1520.0499999999997" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-122" value="&lt;span style=&quot;font-size: 13px;&quot;&gt;将 MFDL xml 地址、算子库 Jar 地址、特征抽取框架 jar 地址 一起提交给Spark 任务&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="387" y="1470" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-124" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;h1&lt;/font&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="170" y="1205" width="55" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-125" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;h2&lt;/span&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="232.5" y="1205" width="55" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-126" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;h3&lt;/span&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1205" width="55" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-127" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;spark1&lt;/span&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="578.5" y="1205" width="55" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-128" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;spark2&lt;/span&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="641" y="1205" width="55" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-129" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;spark3&lt;/span&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="708.5" y="1205" width="55" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-130" value="&lt;span style=&quot;font-size: 13px;&quot;&gt;Spark任务调度执行，批处理，并行计算&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="790" y="1308" width="170" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="V1DBYt7TzoHOVX0YRmnc-132" value="" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0.994;exitY=0.346;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.009;entryY=0.472;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="779.6800000000003" y="1201.16" as="sourcePoint" />
+            <mxPoint x="782.98" y="1259.1200000000001" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="870" y="1212" />
+              <mxPoint x="810" y="1292" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
